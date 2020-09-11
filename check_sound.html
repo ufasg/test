@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Проверка автовоспроизведения звука</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+	    
+	    function playsound(str){
+		document.body.innerHTML=document.body.innerHTML+'<div>'+str+'</div>'
+		document.getElementById('sound').innerHTML='';
+		document.getElementById('sound').innerHTML='<embed src="alarm.wav" height="0" width="0" hidden="true" autostart="true" loop="false"></embed>';			
+	      }
+	      
+	     setTimeout(playsound,1000,'Должно начаться автовоспроизведение звука')
+	   
+        </script>
+    </head>
+    <body>
+	<div id="sound">
+	    <!--<audio id="audio" preload="true">
+		<source src="static/audio/alarm.ogg">
+		<source src="static/audio/alarm.mp3" type="audio/mpeg">
+		<source src="static/audio/alarm.wav" type="audio/wav">
+	    </audio>-->
+	</div>
+	<div>Проверка автовоспроизведения звука. Должно начаться с появлением надписи о начале автовоспроизведения)</div>
+	<button onclick="playsound('Воспроизведение звука после взаимодействия пользователя')">Кликни меня чтоб услышать звук</button>
+    </body>
+</html>
